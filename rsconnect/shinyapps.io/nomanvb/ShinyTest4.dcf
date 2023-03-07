@@ -1,0 +1,13 @@
+name: ShinyTest4
+title: ShinyTest4
+username:
+account: nomanvb
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 8502828
+bundleId: 6926944
+url: https://nomanvb.shinyapps.io/ShinyTest4/
+when: 1678210457.90315
+lastSyncTime: 1678210457.90317
+asMultiple: FALSE
+asStatic: FALSE
