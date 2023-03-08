@@ -10,9 +10,10 @@ options(
   # specify auth tokens should be stored in a hidden directory ".secrets"
   gargle_oauth_cache = ".secrets"
 )
-googledrive::drive_auth()
+  
+  #googledrive::drive_auth()  # run one time to get auth token in local. use gmail account r.shiny.go@gmail.com  pass: ssgGDtPgmdueE$4
 
-googlesheets4::gs4_auth()
+  #googlesheets4::gs4_auth()   # run one time to get auth token in local. use gmail account r.shiny.go@gmail.com  pass: ssgGDtPgmdueE$4
 
 
 
@@ -44,11 +45,11 @@ ui <- fluidPage(
 # Define server logic required to draw a histogram
 server <- function(input, output,session) {
 
-  gs4_auth(cache=".secrets", email="ariful.ambia@gmail.com")
+  #gs4_auth(cache=".secrets", email="r.shiny.go@gmail.com ")
 
   rt_data <- reactive({
     invalidateLater(20000)
-    googlesheets4::read_sheet("https://docs.google.com/spreadsheets/d/1_1e_WXmDuCDkcP-b9DfEDl2c0fA5rFNg0IjjfmaURk4/edit?usp=share_link")
+    googlesheets4::read_sheet("https://docs.google.com/spreadsheets/d/1u5J002c-jq1UGDhhwlRRHm1UrBAWuXj9IuG5XKpLCP8/edit#gid=0")
   })
   
   proxy <- dataTableProxy("distPlot")
@@ -69,7 +70,7 @@ server <- function(input, output,session) {
       
       output$distPlot <- renderPlot({
         # generate bins based on input$bins from ui.R
-        x    <- isolate(rt_data())$B
+        x    <- isolate(rt_data())$Count
         class(x)
         bins <- seq(min(x), max(x), length.out = input$bins + 1)
         # draw the histogram with the specified number of bins

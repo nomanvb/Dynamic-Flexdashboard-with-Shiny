@@ -5,9 +5,9 @@ account: nomanvb
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 8502828
-bundleId: 6926944
+bundleId: 6929843
 url: https://nomanvb.shinyapps.io/ShinyTest4/
-when: 1678210457.90315
-lastSyncTime: 1678210457.90317
+when: 1678262614.55232
+lastSyncTime: 1678262614.55234
 asMultiple: FALSE
 asStatic: FALSE
